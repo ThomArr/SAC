@@ -1,0 +1,26 @@
+[package]
+name = "sac"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+aes-gcm = "0.10.3"
+anyhow = "1.0.102"
+async-trait = "0.1.89"
+base64 = "0.22.1"
+rand = "0.8"
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.150"
+tokio = { version = "1.52.3", features = ["full"] }
+eframe = "0.29"
+egui = "0.29"
+rfd = "0.15"
+openssl = "0.10"
+hex = "0.4"
+serde_yaml = "0.9"
+reqwest = { version = "0.12", features = ["json"] }
+urlencoding = "2"
+hmac = "0.12"
+sha2 = "0.10"
+chrono = "0.4"
+quick-xml = { version = "0.37", features = ["serialize"] }
