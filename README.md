@@ -61,7 +61,7 @@ cargo run --release
 ---
 
 ## Configuration
-Le client lit sa configuration dans le fichier config.yaml.
+Le client lit sa configuration dans le fichier `config.yaml`.
 
 ## Configuration du keystore
 
@@ -73,7 +73,11 @@ SAC supporte actuellement :
 Les modes TLS-SE USB et Bluetooth ne sont pas encore intégrés au client mais possible avec LeMonolith
 
 #### Connexion directe au keystore (TLS-PSK)
+
 Dans ce mode, le client se connecte directement au keystore Ethertrust à l’aide d’une identité TLS-PSK et d’une clé pré-partagée.
+
+A indiquer dans le `config.yaml`:
+
 ```yaml 
 keystore:
   connection_mode: direct_psk
@@ -99,7 +103,11 @@ keystore:
 ---
 
 #### Connexion via Secure Element (TLS-SE WiFi)
+
 Dans ce mode, le client utilise le programme `tlsse` pour déléguer l’authentification à un Secure Element compatible TLS-SE.
+
+A indiquer dans le `config.yaml`:
+
 ```yaml
 tlsse: ../../pnhsm/ubuntu/tlsse
 
@@ -140,7 +148,11 @@ keystore:
 ---
 
 ### Configuration du cloud
+
 #### Stockage local
+
+A indiquer dans le `config.yaml`:
+
 ```yaml
 cloud:
   provider: local
@@ -154,6 +166,8 @@ cloud:
 --- 
 
 #### Azure Blob Storage
+
+A indiquer dans le `config.yaml`:
 
 ```yaml
 cloud:
@@ -189,6 +203,8 @@ EndpointSuffix=core.windows.net
 | EndpointSuffix | Suffixe Azure Storage (`core.windows.net`) |
 
 #### SharePoint
+
+A indiquer dans le `config.yaml`:
 
 ```yaml
 cloud:
